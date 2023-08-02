@@ -10,5 +10,16 @@ package model;
  * @author irsya
  */
 public class AgeCategory {
+   // Variable yang ada di database bioskop
+    private int id;
+    
+    
+    //Constructor
+    public AgeCategory(int id){
+        this.id = id;
+}
+    
+//    getter & setter
+    
     
 }

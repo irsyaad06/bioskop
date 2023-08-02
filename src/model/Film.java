@@ -11,6 +11,12 @@ package model;
  */
 public class Film{
     
+//    bikin variable pake private
+    
+    
+    // bikin constructor pake variable diatas
+    
+//    bikin getter setter 
 }
 
     

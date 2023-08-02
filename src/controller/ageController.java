@@ -10,6 +10,6 @@ package controller;
  * @author irsya
  */
 
-public class CategoryController {
+public class ageController {
     
 }
