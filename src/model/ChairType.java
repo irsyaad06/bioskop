@@ -7,22 +7,16 @@ package model;
 
 /**
  *
- * @author irsya
+ * @author 
  */
-public class AgeCategory {
-   // Variable yang ada di database bioskop
+public class ChairType {
     private int id;
-    private int usia;
+    private String tipe;
     
-    //Constructor
-    public AgeCategory(int id, int usia){
+    public ChairType(int id, String tipe){
         this.id = id;
-        this.usia = usia;
-}
-    
-  
-    
-//    getter & setter
+        this.tipe = tipe;
+    }   
 
     public int getId() {
         return id;
@@ -32,13 +26,11 @@ public class AgeCategory {
         this.id = id;
     }
 
-    public int getUsia() {
-        return usia;
+    public String getTipe() {
+        return tipe;
     }
 
-    public void setUsia(int usia) {
-        this.usia = usia;
+    public void setTipe(String tipe) {
+        this.tipe = tipe;
     }
-    
-    
 }
