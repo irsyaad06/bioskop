@@ -15,13 +15,14 @@ public class Film{
         private int id;
         private String film_title;
         private String age_category;
-        
+        private int status;
     
     // bikin constructor pake variable diatas
-        public Film(int id, String film_title, String age_category){
+        public Film(int id, String film_title, String age_category, int status){
             this.id = id;
             this.film_title = film_title;
             this.age_category = age_category;
+            this.status = status;
         }
 //    bikin getter setter 
 
@@ -48,7 +49,16 @@ public class Film{
     public void setAge_category(String age_category) {
         this.age_category = age_category;
     }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
         
+    
         
 }
 
