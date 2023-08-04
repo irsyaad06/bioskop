@@ -4,19 +4,25 @@
  */
 package view;
 
+import java.awt.Color;
+import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.JFrame;
+
 /**
  *
  * @author fahri
  */
-public class PanelBorder extends javax.swing.JPanel {
+public class SettingMain extends javax.swing.JPanel {
 
     /**
-     * Creates new form PanelBorder
+     * Creates new form SettingMain
      */
-    public PanelBorder() {
+    public SettingMain() {
         initComponents();
         setOpaque(false);
     }
@@ -34,7 +40,7 @@ public class PanelBorder extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 600, Short.MAX_VALUE)
+            .addGap(0, 506, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -43,13 +49,17 @@ public class PanelBorder extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     @Override
-    protected void paintComponent(Graphics grphcs) {
+    protected void paintChildren(Graphics grphcs) {
         Graphics2D g2=(Graphics2D)(grphcs);
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        g2.setColor(getBackground());
-        g2.fillRoundRect(0, 0, getWidth(), getHeight(), 15, 15);        
-        super.paintComponent(grphcs);
+        GradientPaint g= new GradientPaint(0, 0, Color.decode("#8E0E00"), 0, getHeight(), Color.decode("#1F1C18"));
+        g2.setPaint(g);
+        g2.fillRoundRect(0, 0, getWidth(), getHeight(), 15, 15); 
+        g2.fillRect(getWidth() -20, 0, getWidth(), getHeight());
+        super.paintChildren(grphcs);
     }
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
 }
